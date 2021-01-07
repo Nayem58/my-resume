@@ -1,0 +1,312 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body img {
+  border: 0;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+}
+
+body i.fa {
+  background: -webkit-gradient(linear, left top, right top, from(#013e81), to(#3897ff));
+  background: linear-gradient(to right, #013e81, #3897ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body .gradient-text {
+  background: -webkit-gradient(linear, left top, right top, from(#013e81), to(#3897ff));
+  background: linear-gradient(to right, #013e81, #3897ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body ul {
+  padding-left: 25px;
+}
+
+body .check-mark,
+body .check-right,
+body .check-circle {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+body .check-mark > li,
+body .check-right > li,
+body .check-circle > li {
+  position: relative;
+  padding-left: 25px;
+}
+
+body .check-right > li:before {
+  content: "\f00c";
+}
+
+body .check-mark > li:before {
+  content: "\f046";
+}
+
+body .check-circle > li:before {
+  content: "\f10c";
+}
+
+body .check-mark > li:before,
+body .check-right > li:before,
+body .check-circle > li:before {
+  background: -webkit-gradient(linear, left top, right top, from(#013e81), to(#3897ff));
+  background: linear-gradient(to right, #013e81, #3897ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  font-weight: 300;
+  position: absolute;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: FontAwesome;
+}
+
+@media (min-width: 992px) {
+  body .count-lg-2 {
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media (min-width: 768px) {
+  body .count-md-2 {
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+body p:last-child,
+body ul:last-child,
+body li:last-child {
+  margin-bottom: 0;
+}
+
+body .a4-page {
+  position: relative;
+  background: white;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  -webkit-box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+  width: 21cm;
+  height: 29.7cm;
+}
+
+body .a4-page .brief {
+  background-color: #f6f6f6;
+  padding: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .a4-page .brief .short-details {
+  -ms-flex-preferred-size: 74%;
+      flex-basis: 74%;
+  min-width: 0;
+}
+
+body .a4-page .brief .short-details .name {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+body .a4-page .brief .short-details .name span {
+  font-weight: 400;
+}
+
+body .a4-page .brief .short-details .desig {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+body .a4-page .brief .short-details .contact span {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+body .a4-page .brief .short-details .contact ul {
+  padding-left: 0;
+  list-style-type: none;
+  -webkit-column-count: 2;
+          column-count: 2;
+}
+
+body .a4-page .brief .short-details .contact ul li a {
+  font-weight: 400;
+  color: #2b2b2b;
+}
+
+body .a4-page .brief .photo {
+  -ms-flex-preferred-size: 24%;
+      flex-basis: 24%;
+  border: 2px solid #fff;
+}
+
+body .a4-page .brief .photo img {
+  width: 100%;
+}
+
+body .a4-page .details {
+  padding: 25px;
+}
+
+body .a4-page .details section {
+  padding: 20px;
+  margin-bottom: 25px;
+  background-color: #f6f6f6;
+}
+
+body .a4-page .details section:last-child {
+  margin-bottom: 0;
+}
+
+body .a4-page .details section .heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+body .a4-page .details .skills ul li {
+  position: relative;
+}
+
+body .a4-page .details .skills ul li:before, body .a4-page .details .skills ul li:after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 16px;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #d8d8d8;
+  transform: translateY(-50%);
+}
+
+body .a4-page .details .skills ul #html:after {
+  width: 280px;
+  right: 20px;
+  background: #dd4b27;
+}
+
+body .a4-page .details .skills ul #css:after {
+  width: 250px;
+  right: 50px;
+  background: #274bdc;
+}
+
+body .a4-page .details .skills #bootstrap:after {
+  width: 250px;
+  right: 50px;
+  background: #543b77;
+}
+
+body .a4-page .details .skills #js:after {
+  width: 125px;
+  right: 175px;
+  background: #efd81e;
+}
+
+body .a4-page .details .skills #php:after {
+  width: 125px;
+  right: 175px;
+  background: #7377ac;
+}
+
+body .a4-page .details .skills #mysql:after {
+  width: 100px;
+  right: 200px;
+  background: #5b839c;
+}
+
+body .a4-page .details .experience .from-to {
+  font-style: italic;
+}
+
+body .a4-page .details .experience .company-name {
+  font-weight: 600;
+}
+
+body .a4-page .details .education .institute-name {
+  font-weight: 600;
+}
+
+body .a4-page .details .personal-info table tr td,
+body .a4-page .details .address table tr td {
+  padding-bottom: 10px;
+  vertical-align: top;
+}
+
+body .a4-page .details .personal-info table tr td:first-child,
+body .a4-page .details .address table tr td:first-child {
+  font-weight: 600;
+  padding-right: 20px;
+}
+
+body .a4-page .details .personal-info table tr td:last-child,
+body .a4-page .details .address table tr td:last-child {
+  padding-left: 20px;
+}
+
+body .a4-page .details .personal-info table tr:last-child td,
+body .a4-page .details .address table tr:last-child td {
+  padding-bottom: 0;
+}
+
+body .a4-page .details .date-and-signature {
+  position: absolute;
+  bottom: 25px;
+  width: calc(100% - 50px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .a4-page .details .date-and-signature .date {
+  font-weight: 600;
+}
+
+body .a4-page .details .date-and-signature .signature img {
+  border-bottom: 2px solid #000;
+  margin-bottom: 5px;
+}
+
+body .a4-page .details .date-and-signature .signature .name {
+  text-align: center;
+  font-weight: 600;
+}
+/*# sourceMappingURL=resume.css.map */

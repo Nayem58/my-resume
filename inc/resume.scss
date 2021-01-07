@@ -1,0 +1,311 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    border: 0;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic;
+  }
+
+  i.fa {
+    background: linear-gradient(to right, #013e81, #3897ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gradient-text {
+    background: linear-gradient(to right, #013e81, #3897ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  // list style
+  ul {
+    padding-left: 25px;
+  }
+  .check-mark,
+  .check-right,
+  .check-circle {
+    margin-left: 0;
+    padding-left: 0;
+    list-style-type: none;
+  }
+  .check-mark > li,
+  .check-right > li,
+  .check-circle > li {
+    position: relative;
+    padding-left: 25px;
+  }
+  .check-right > li:before {
+    content: "\f00c";
+  }
+  .check-mark > li:before {
+    content: "\f046";
+  }
+  .check-circle > li:before {
+    content: "\f10c";
+  }
+  .check-mark > li:before,
+  .check-right > li:before,
+  .check-circle > li:before {
+    background: linear-gradient(to right, #013e81, #3897ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    font-weight: 300;
+    position: absolute;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: FontAwesome;
+  }
+
+  // ul-count
+  @media (min-width: 992px) {
+    .count-lg-2 {
+      -webkit-column-count: 2;
+      column-count: 2;
+    }
+  }
+  @media (min-width: 768px) {
+    .count-md-2 {
+      -webkit-column-count: 2;
+      column-count: 2;
+    }
+  }
+
+  p:last-child,
+  ul:last-child,
+  li:last-child {
+    margin-bottom: 0;
+  }
+
+  .a4-page {
+    position: relative;
+    background: white;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.5cm;
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+    width: 21cm;
+    height: 29.7cm;
+
+    .brief {
+      background-color: #f6f6f6;
+      padding: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .short-details {
+        flex-basis: 74%;
+        min-width: 0;
+
+        .name {
+          font-size: 40px;
+          font-weight: 300;
+
+          span {
+            font-weight: 400;
+          }
+        }
+
+        .desig {
+          font-size: 24px;
+          margin-bottom: 20px;
+          font-weight: 400;
+        }
+
+        .contact {
+          span {
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: 400;
+          }
+
+          ul {
+            padding-left: 0;
+            list-style-type: none;
+            column-count: 2;
+
+            li {
+              a {
+                font-weight: 400;
+                color: #2b2b2b;
+              }
+            }
+          }
+        }
+      }
+
+      .photo {
+        flex-basis: 24%;
+        border: 2px solid #fff;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .details {
+      padding: 25px;
+      section {
+        padding: 20px;
+        margin-bottom: 25px;
+        background-color: #f6f6f6;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .heading {
+          font-size: 20px;
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+      }
+
+      .skills {
+        ul {
+          li {
+            position: relative;
+
+            &:before,
+            &:after {
+              content: "";
+              position: absolute;
+              width: 300px;
+              height: 16px;
+              top: 50%;
+              right: 0;
+              transform: translateY(-50%);
+              background: #d8d8d8;
+              transform: translateY(-50%);
+            }
+          }
+
+          #html {
+            &:after {
+              width: 280px;
+              right: 20px;
+              background: #dd4b27;
+            }
+          }
+          #css {
+            &:after {
+              width: 250px;
+              right: 50px;
+              background: #274bdc;
+            }
+          }
+        }
+        #bootstrap {
+          &:after {
+            width: 250px;
+            right: 50px;
+            background: #543b77;
+          }
+        }
+        #js {
+          &:after {
+            width: 125px;
+            right: 175px;
+            background: #efd81e;
+          }
+        }
+        #php {
+          &:after {
+            width: 125px;
+            right: 175px;
+            background: #7377ac;
+          }
+        }
+        #mysql {
+          &:after {
+            width: 100px;
+            right: 200px;
+            background: #5b839c;
+          }
+        }
+      }
+
+      .experience {
+        .from-to {
+          font-style: italic;
+        }
+        .company-name {
+          font-weight: 600;
+        }
+      }
+
+      .education {
+        .institute-name {
+          font-weight: 600;
+        }
+      }
+
+      .personal-info,
+      .address {
+        table {
+          tr {
+            td {
+              padding-bottom: 10px;
+              vertical-align: top;
+
+              &:first-child {
+                font-weight: 600;
+                padding-right: 20px;
+              }
+
+              &:last-child {
+                padding-left: 20px;
+              }
+            }
+
+            &:last-child {
+              td {
+                padding-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+
+      .date-and-signature {
+        position: absolute;
+        bottom: 25px;
+        width: calc(100% - 50px);
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        .date {
+          font-weight: 600;
+        }
+
+        .signature {
+          img {
+            border-bottom: 2px solid #000;
+            margin-bottom: 5px;
+          }
+
+          .name {
+            text-align: center;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
