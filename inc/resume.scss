@@ -2,9 +2,11 @@ body {
   font-family: "Open Sans", sans-serif;
   padding-top: 50px;
   padding-bottom: 50px;
+  background-color: #ececec;
 
   a {
     text-decoration: none;
+    color: #212529;
   }
 
   img {
@@ -31,17 +33,23 @@ body {
   // list style
   ul {
     padding-left: 25px;
+
+    // li {
+    //   margin-bottom: 10px;
+    // }
   }
   .check-mark,
   .check-right,
-  .check-circle {
+  .desktop,
+  .bookmark {
     margin-left: 0;
     padding-left: 0;
     list-style-type: none;
   }
   .check-mark > li,
   .check-right > li,
-  .check-circle > li {
+  .desktop > li,
+  .bookmark > li {
     position: relative;
     padding-left: 25px;
   }
@@ -51,12 +59,16 @@ body {
   .check-mark > li:before {
     content: "\f046";
   }
-  .check-circle > li:before {
-    content: "\f10c";
+  .desktop > li:before {
+    content: "\f08e";
+  }
+  .bookmark > li:before {
+    content: "\f02e";
   }
   .check-mark > li:before,
   .check-right > li:before,
-  .check-circle > li:before {
+  .desktop > li:before,
+  .bookmark > li:before {
     background: linear-gradient(to right, #013e81, #3897ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -92,13 +104,34 @@ body {
 
   .a4-page {
     position: relative;
-    background: white;
+    background: #fff;
     display: block;
     margin: 0 auto;
     margin-bottom: 0.5cm;
-    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
     width: 21cm;
     height: 29.7cm;
+    box-shadow: 0 0 10px 0 #ddd;
+
+    &:after {
+      z-index: -1;
+      position: absolute;
+      content: "";
+      bottom: 15px;
+      right: 10px;
+      left: auto;
+      width: 50%;
+      top: 80%;
+      max-width: 300px;
+      background: #777;
+      -webkit-box-shadow: 0 15px 10px #777;
+      -moz-box-shadow: 0 15px 10px #777;
+      box-shadow: 0 15px 10px #777;
+      -webkit-transform: rotate(3deg);
+      -moz-transform: rotate(3deg);
+      -o-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+      transform: rotate(3deg);
+    }
 
     .brief {
       background-color: #f6f6f6;
@@ -224,6 +257,20 @@ body {
             background: #efd81e;
           }
         }
+        #jQuery {
+          &:after {
+            width: 125px;
+            right: 175px;
+            background: #0868ab;
+          }
+        }
+        #webpack {
+          &:after {
+            width: 50px;
+            right: 250px;
+            background: #8acef1;
+          }
+        }
         #php {
           &:after {
             width: 125px;
@@ -233,14 +280,28 @@ body {
         }
         #mysql {
           &:after {
-            width: 100px;
-            right: 200px;
+            width: 75px;
+            right: 225px;
             background: #5b839c;
+          }
+        }
+        #adobePS {
+          &:after {
+            width: 50px;
+            right: 250px;
+            background: #31a8ff;
+          }
+        }
+        #adobeXD {
+          &:after {
+            width: 35px;
+            right: 265px;
+            background: #f75fed;
           }
         }
       }
 
-      .experience {
+      .experiences {
         .from-to {
           font-style: italic;
         }

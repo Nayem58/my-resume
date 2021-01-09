@@ -2,10 +2,12 @@ body {
   font-family: "Open Sans", sans-serif;
   padding-top: 50px;
   padding-bottom: 50px;
+  background-color: #ececec;
 }
 
 body a {
   text-decoration: none;
+  color: #212529;
 }
 
 body img {
@@ -37,7 +39,8 @@ body ul {
 
 body .check-mark,
 body .check-right,
-body .check-circle {
+body .desktop,
+body .bookmark {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
@@ -45,7 +48,8 @@ body .check-circle {
 
 body .check-mark > li,
 body .check-right > li,
-body .check-circle > li {
+body .desktop > li,
+body .bookmark > li {
   position: relative;
   padding-left: 25px;
 }
@@ -58,13 +62,18 @@ body .check-mark > li:before {
   content: "\f046";
 }
 
-body .check-circle > li:before {
-  content: "\f10c";
+body .desktop > li:before {
+  content: "\f08e";
+}
+
+body .bookmark > li:before {
+  content: "\f02e";
 }
 
 body .check-mark > li:before,
 body .check-right > li:before,
-body .check-circle > li:before {
+body .desktop > li:before,
+body .bookmark > li:before {
   background: -webkit-gradient(linear, left top, right top, from(#013e81), to(#3897ff));
   background: linear-gradient(to right, #013e81, #3897ff);
   -webkit-background-clip: text;
@@ -101,14 +110,31 @@ body li:last-child {
 
 body .a4-page {
   position: relative;
-  background: white;
+  background: #fff;
   display: block;
   margin: 0 auto;
   margin-bottom: 0.5cm;
-  -webkit-box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
   width: 21cm;
   height: 29.7cm;
+  -webkit-box-shadow: 0 0 10px 0 #ddd;
+          box-shadow: 0 0 10px 0 #ddd;
+}
+
+body .a4-page:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  right: 10px;
+  left: auto;
+  width: 50%;
+  top: 80%;
+  max-width: 300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(3deg);
+  transform: rotate(3deg);
 }
 
 body .a4-page .brief {
@@ -235,6 +261,18 @@ body .a4-page .details .skills #js:after {
   background: #efd81e;
 }
 
+body .a4-page .details .skills #jQuery:after {
+  width: 125px;
+  right: 175px;
+  background: #0868ab;
+}
+
+body .a4-page .details .skills #webpack:after {
+  width: 50px;
+  right: 250px;
+  background: #8acef1;
+}
+
 body .a4-page .details .skills #php:after {
   width: 125px;
   right: 175px;
@@ -242,16 +280,28 @@ body .a4-page .details .skills #php:after {
 }
 
 body .a4-page .details .skills #mysql:after {
-  width: 100px;
-  right: 200px;
+  width: 75px;
+  right: 225px;
   background: #5b839c;
 }
 
-body .a4-page .details .experience .from-to {
+body .a4-page .details .skills #adobePS:after {
+  width: 50px;
+  right: 250px;
+  background: #31a8ff;
+}
+
+body .a4-page .details .skills #adobeXD:after {
+  width: 35px;
+  right: 265px;
+  background: #f75fed;
+}
+
+body .a4-page .details .experiences .from-to {
   font-style: italic;
 }
 
-body .a4-page .details .experience .company-name {
+body .a4-page .details .experiences .company-name {
   font-weight: 600;
 }
 
